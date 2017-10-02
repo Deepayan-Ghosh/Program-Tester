@@ -1,0 +1,17 @@
+import java.util.Scanner;
+public class testprogram
+{
+	public static void main(String args[])
+	{
+		Scanner sc = new Scanner(System.in);
+		int t=sc.nextInt();
+		for(int i=1;i<=t;i++)
+		{
+			float m = sc.nextFloat();
+			float n = sc.nextFloat();
+			float d = m/n;
+			System.out.println(d);
+			
+		}
+	}
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<file>
+    <testcases max="10"/>
+    <line>
+        <element name="m" type="real" min="0" max="10"/>
+        <element name="n" type="real" min="0" max="10"/>
+    </line>
+</file>
