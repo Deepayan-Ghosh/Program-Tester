@@ -126,8 +126,13 @@ class CustomXMLParser:
             # else if 'maxlen' is mentioned then random length is chosen every time
             length = child.attrib.get('len', None)
             if length is None:
-                length = child.attrib.get('maxlen', 1)
-                length = random.randint(1, int(length))
+                max_length = child.attrib.get('maxlen', 1)
+                min_length = child.attrib.get('minlen', 1)
+                if max_length in self.variable_names:
+                    max_length = self.variable_names.get(max_length)
+                if min_length in self.variable_names:
+                    min_length = self.variable_names.get(min_length)
+                length = random.randint(int(min_length), int(max_length))
             elif length in self.variable_names:
                 length = self.variable_names.get(length, length)
 
